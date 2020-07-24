@@ -40,11 +40,17 @@ ezgmail.init()
 
 print('Access Granted, reading emails:', '\r\n','\r\n')
 
-threads = ezgmail.search('security')
+threads = ezgmail.search('heyyy')
 #print(threads[0])
 
 
 ezgmail.summary(threads)
+
+print(threads[0].messages[0].attachments)
+
+threads[0].messages[0].downloadAllAttachments(downloadFolder=main_repo+'/'+today)
+
+
 #['tulips.jpg', 'canal.jpg', 'bicycles.jpg']
 #threads[0].messages[0].downloadAttachment('tulips.jpg')
 #threads[0].messages[0].downloadAllAttachments(downloadFolder='vacation2019')
