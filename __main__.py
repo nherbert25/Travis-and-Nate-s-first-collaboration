@@ -40,14 +40,16 @@ ezgmail.init()
 
 print('Access Granted, reading emails:', '\r\n','\r\n')
 
+
+
+
+
+#parse emails/download attachments
+
 threads = ezgmail.search('heyyy')
 #print(threads[0])
-
-
 ezgmail.summary(threads)
-
 print(threads[0].messages[0].attachments)
-
 threads[0].messages[0].downloadAllAttachments(downloadFolder=main_repo+'/'+today)
 
 
@@ -56,6 +58,6 @@ threads[0].messages[0].downloadAllAttachments(downloadFolder=main_repo+'/'+today
 #threads[0].messages[0].downloadAllAttachments(downloadFolder='vacation2019')
 
 
-#parse emails/download attachments
+
 
 
